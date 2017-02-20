@@ -1,0 +1,31 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Default.Master.vb" Inherits="Boot_Camp_Website.Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager runat="server"></asp:ScriptManager>
+
+        <asp:Label ID="lblTitle" Text="Boot Camp Website" runat="server"></asp:Label>
+
+        <asp:Label ID="lblWelcome" runat="server" Style="z-index: 1; left: 223px; top: 5px; position: absolute; height: 18px; right: 1230px;"></asp:Label>
+
+
+        <asp:LinkButton ID="lnkLogout" runat="server" style="z-index: 1; left: 369px; top: 4px; position: absolute; width: 67px;" Text="Logout"></asp:LinkButton>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+    </form>
+</body>
+</html>

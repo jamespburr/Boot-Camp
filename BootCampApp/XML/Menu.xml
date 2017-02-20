@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <Group>
+  <Item Text=".NET Topic 1" Href="~/Secured/Main.aspx">
+  </Item>
+  </Group>
+  <Item Text=".NET Topic 2">
+    <Group>
+      <Item Text="Employee Registration" Href="~/Secured/EmployeeRegistration.aspx"/>
+      <Item Text="Step 1" Href="~/Secured/Step1.aspx"/>
+    </Group>
+  </Item>    
+</Menu>

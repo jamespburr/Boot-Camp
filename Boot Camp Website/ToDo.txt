@@ -1,0 +1,6 @@
+﻿1) Fix user control  - Done
+2) Add logout to master - Done
+3) Fix validation summary - Done
+4) Add variable in app setting for years ddl - Done
+5) Create page to demo LinqQueries 
+6) Walk through functionality

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{AAC5AAAA-BD17-4412-A240-EA2A94B3938B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Book_Camp_Website</RootNamespace>
+    <AssemblyName>Book Camp Website</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Book Camp Website.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Book Camp Website.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\lib\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\lib\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Boot Camp Library\BootCampLibrary.vbproj">
+      <Project>{6a6b3a6a-c2fb-4f1f-a08d-69410c9ec036}</Project>
+      <Name>BootCampLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLibrary\DataLibrary.vbproj">
+      <Project>{d3518317-866e-488f-964f-485ae78049b5}</Project>
+      <Name>DataLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerControl\ServerControl.vbproj">
+      <Project>{cdc0b694-ec27-42db-b0d5-b8a68377b17d}</Project>
+      <Name>ServerControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Secured\AddBooks.aspx" />
+    <Content Include="Secured\AddressTest.aspx" />
+    <Content Include="Secured\Books.aspx" />
+    <Content Include="Secured\ConfirmButtonTest.aspx" />
+    <Content Include="Secured\ConfirmImage.aspx" />
+    <Content Include="Secured\EmployeeRegistration.aspx" />
+    <Content Include="Secured\LinqDemo.aspx" />
+    <Content Include="Secured\Main.aspx" />
+    <Content Include="Secured\Results.aspx" />
+    <Content Include="Secured\SendResults.aspx" />
+    <Content Include="Secured\Step1.aspx" />
+    <Content Include="Secured\Step2.aspx" />
+    <Content Include="Secured\Step3.aspx" />
+    <Content Include="Secured\TelerikControlsBasic.aspx" />
+    <Content Include="Secured\ThankYou.aspx" />
+    <Content Include="Secured\UploadImage.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="ToDo.txt" />
+    <Content Include="Unsecured\login.aspx" />
+    <Content Include="UserControls\MilesAddress.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\Default.Master.designer.vb">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Default.Master.vb">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Site2.Master.designer.vb">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Site2.Master.vb">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Secured\AddBooks.aspx.designer.vb">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\AddBooks.aspx.vb">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\AddressTest.aspx.designer.vb">
+      <DependentUpon>AddressTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\AddressTest.aspx.vb">
+      <DependentUpon>AddressTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\Books.aspx.designer.vb">
+      <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\Books.aspx.vb">
+      <DependentUpon>Books.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\ConfirmButtonTest.aspx.designer.vb">
+      <DependentUpon>ConfirmButtonTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\ConfirmButtonTest.aspx.vb">
+      <DependentUpon>ConfirmButtonTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\ConfirmImage.aspx.designer.vb">
+      <DependentUpon>ConfirmImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\ConfirmImage.aspx.vb">
+      <DependentUpon>ConfirmImage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\EmployeeRegistration.aspx.designer.vb">
+      <DependentUpon>EmployeeRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\EmployeeRegistration.aspx.vb">
+      <DependentUpon>EmployeeRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\LinqDemo.aspx.designer.vb">
+      <DependentUpon>LinqDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\LinqDemo.aspx.vb">
+      <DependentUpon>LinqDemo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\Main.aspx.designer.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\Main.aspx.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\Results.aspx.designer.vb">
+      <DependentUpon>Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\Results.aspx.vb">
+      <DependentUpon>Results.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\SendResults.aspx.designer.vb">
+      <DependentUpon>SendResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\SendResults.aspx.vb">
+      <DependentUpon>SendResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secured\Step1.aspx.designer.vb">
+      <DependentUpon>Step1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\Step1.aspx.vb">
+      <DependentUpon>Step1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\Step2.aspx.designer.vb">
+      <DependentUpon>Step2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\Step2.aspx.vb">
+      <DependentUpon>Step2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\Step3.aspx.designer.vb">
+      <DependentUpon>Step3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\Step3.aspx.vb">
+      <DependentUpon>Step3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\TelerikControlsBasic.aspx.designer.vb">
+      <DependentUpon>TelerikControlsBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\TelerikControlsBasic.aspx.vb">
+      <DependentUpon>TelerikControlsBasic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\ThankYou.aspx.designer.vb">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\ThankYou.aspx.vb">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Secured\UploadImage.aspx.designer.vb">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secured\UploadImage.aspx.vb">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Unsecured\login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unsecured\login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MilesAddress.ascx.designer.vb">
+      <DependentUpon>MilesAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MilesAddress.ascx.vb">
+      <DependentUpon>MilesAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Default.Master" />
+    <Content Include="Master\Site2.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60187</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60187/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
